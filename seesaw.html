@@ -1,0 +1,40 @@
+<script type="text/javascript">
+    RED.nodes.registerType('seesaw',{
+        category: 'seesaw',
+        color: '#a6bbcf',
+        defaults: {
+            name: { value: "" },
+	    bus: { value: 1 },
+	    device: { value: 0x49 },
+	    encoder: { value: 0 },
+        },
+        inputs: 0,
+        outputs: 1,
+        label: function() {
+            return this.name || "seesaw";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="seesaw">
+    <div class="form-row">
+        <label for="node-input-name">Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-bus">I2C Bus</label>
+        <input type="text" id="node-input-bus" placeholder="1">
+    </div>
+    <div class="form-row">
+        <label for="node-input-device">I2C Device</label>
+        <input type="text" id="node-input-device" placeholder="0x49">
+    </div>
+    <div class="form-row">
+        <label for="node-input-encoder">Encoder</label>
+        <input type="text" id="node-input-encoder" placeholder="0">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="seesaw">
+    <p>XXX describe me</p>
+</script>
